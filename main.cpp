@@ -27,7 +27,7 @@ int main(){
     cout << "Moeda: " << moeda.getValor() << endl;
 
     try{
-        descricao.setTexto("Casa grande e bem aalocada12345.");
+        descricao.setTexto("Casa grande e bem alocada.");
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;

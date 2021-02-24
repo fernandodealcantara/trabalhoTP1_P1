@@ -92,7 +92,22 @@ class Descricao{
         string texto;
         void validar(string texto);
     public:
+///
+/// Armazena o texto da descricao
+///
+/// Lanca excecao caso o texto informado seja invalido
+///
+/// @param valor string
+///
+/// @throw invalid_argument
+///
         void setTexto(string texto);
+
+///
+/// Retorna o texto da descricao
+///
+/// @return string
+///
         string getTexto();
 
 };

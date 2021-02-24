@@ -37,10 +37,12 @@ void Descricao::validar(string texto){
     regex texto_modelo(".{5,30}\\.");
     // descricao valida retorna true, caso contrario false
     if(!regex_match(texto, texto_modelo))
-        throw invalid_argument("Argumento invalido. Descricoes com tamanho entre 5 e 30 terminados em ponto.");
+        throw invalid_argument("Argumento invalido. Descricao deve conter entre 5 e 30 caracteres e terminar em ponto.");
 }
 
 void Descricao::setTexto(string texto){
     validar(texto);
     this->texto = texto;
 }
+
+// Definicoes de metodos da classe
