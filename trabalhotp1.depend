@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1614195364 source:c:\users\ferna\documents\unb\tp1\trabalhos\trabalhotp1\main.cpp
+	<iostream>
+	"Dominios.h"
+
+1614200182 c:\users\ferna\documents\unb\tp1\trabalhos\trabalhotp1\dominios.h
+	<stdexcept>
+
+1614200755 source:c:\users\ferna\documents\unb\tp1\trabalhos\trabalhotp1\dominios.cpp
+	<iostream>
+	<regex>
+	"Dominios.h"
+
