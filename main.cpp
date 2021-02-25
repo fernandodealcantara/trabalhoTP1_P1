@@ -10,6 +10,7 @@ int main(){
     Nome nome;
     Classe classe;
 
+
     //Testando classe numero
     try{
         num.setValor(15);
@@ -20,6 +21,7 @@ int main(){
 
     cout << "Numero: " << num.getValor() << endl;
 
+
     //Testando classe moeda
     try{
         moeda.setValor("542.000,00");
@@ -27,7 +29,9 @@ int main(){
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
+
     cout << "Moeda: " << moeda.getValor() << endl;
+
 
     //Testando classe descricao
     try{
@@ -36,7 +40,9 @@ int main(){
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
+
     cout << "Descricao: " << descricao.getTexto() << endl;
+
 
     //Testando classe nome
     try{
@@ -45,7 +51,9 @@ int main(){
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
+
     cout << "Nome: " << nome.getNome() << endl;
+
 
     //Testando classe classe
 
@@ -55,6 +63,9 @@ int main(){
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
+
     cout << "Classe: " << classe.getClasse() << endl;
 
+
+    return 0;
 }

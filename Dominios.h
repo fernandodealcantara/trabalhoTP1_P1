@@ -11,6 +11,7 @@ using namespace std;
 /// Regras de formato:
 ///
 /// - Numero valido apenas de 0 a 20
+///
 
 class Numero {
     private:
@@ -66,12 +67,15 @@ class Moeda {
 ///
 /// @throw invalid_argument
 ///
+
         void setValor(string valor);
+
 ///
 /// Retorna valor da moeda
 ///
 /// @return valor
 ///
+
         string getValor();
 
 };
@@ -87,11 +91,13 @@ inline string Moeda::getValor(){
 ///
 /// - Descricoes aceitam 5 a 30 caracteres e eh terminado por ponto.
 ///
+
 class Descricao{
     private:
         string texto;
         void validar(string texto);
     public:
+
 ///
 /// Armazena o texto da descricao
 ///
@@ -101,6 +107,7 @@ class Descricao{
 ///
 /// @throw invalid_argument
 ///
+
         void setTexto(string texto);
 
 ///
@@ -108,6 +115,7 @@ class Descricao{
 ///
 /// @return string
 ///
+
         string getTexto();
 
 };
@@ -162,6 +170,7 @@ inline string Nome::getNome(){
 /// Regras de formato:
 ///
 /// - 1 para apartamento, 2 para casa e 3 para quarto.
+///
 
 class Classe{
     private:
@@ -182,6 +191,7 @@ class Classe{
 ///
 /// @throw invalid_argument
 ///
+
         void setClasse(int valor);
 
 ///
@@ -189,6 +199,7 @@ class Classe{
 ///
 /// @return classe
 ///
+
         string getClasse();
 
 };
