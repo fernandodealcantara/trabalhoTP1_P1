@@ -62,3 +62,28 @@ void Nome::setNome(string nome){
     validar(nome);
     this->nome = nome;
 }
+
+// Definicoes de metodos da classe classe
+
+void Classe::validar(int valor){
+    if(valor != APARTAMENTO && valor != CASA && valor != QUARTO)
+        throw invalid_argument("Argumento invalido. Valores apenas de 1 a 3");
+}
+
+void Classe::setClasse(int valor){
+    validar(valor);
+    switch(valor){
+        case 1:
+            this->classe = "apartamento";
+            break;
+
+        case 2:
+            this->classe = "casa";
+            break;
+
+        case 3:
+            this->classe = "quarto";
+            break;
+
+    }
+}

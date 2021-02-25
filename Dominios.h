@@ -156,5 +156,46 @@ inline string Nome::getNome(){
     return nome;
 }
 
+///
+/// Padrao para representacao de classe
+///
+/// Regras de formato:
+///
+/// - 1 para apartamento, 2 para casa e 3 para quarto.
+
+class Classe{
+    private:
+        const static int APARTAMENTO = 1;
+        const static int CASA = 2;
+        const static int QUARTO = 3;
+        string classe;
+        void validar(int valor);
+
+    public:
+
+///
+/// Armazena o numero informado e caso o mesmo seja valido atribui uma classe
+///
+/// Lanca excecao caso o valor informado seja invalido
+///
+/// @param valor classe
+///
+/// @throw invalid_argument
+///
+        void setClasse(int valor);
+
+///
+/// Retorna classe
+///
+/// @return classe
+///
+        string getClasse();
+
+};
+
+inline string Classe::getClasse(){
+    return classe;
+}
+
 
 #endif // DOMINIOS_H_INCLUDED
