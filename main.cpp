@@ -8,6 +8,7 @@ int main(){
     Moeda moeda;
     Descricao descricao;
     Nome nome;
+    Classe classe;
 
     //Testando classe numero
     try{
@@ -45,5 +46,15 @@ int main(){
         cout << "Excecao: " << exp.what() << endl;
     }
     cout << "Nome: " << nome.getNome() << endl;
+
+    //Testando classe classe
+
+    try{
+        classe.setClasse(1);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+    cout << "Classe: " << classe.getClasse() << endl;
 
 }

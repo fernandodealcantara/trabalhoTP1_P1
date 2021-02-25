@@ -23,3 +23,15 @@
 	<iostream>
 	"Dominios.h"
 
+1614218530 source:c:\users\andr…\documents\github\trabalhotp1\dominios.cpp
+	<iostream>
+	<regex>
+	"Dominios.h"
+
+1614218106 c:\users\andr…\documents\github\trabalhotp1\dominios.h
+	<stdexcept>
+
+1614218329 source:c:\users\andr…\documents\github\trabalhotp1\main.cpp
+	<iostream>
+	"Dominios.h"
+
