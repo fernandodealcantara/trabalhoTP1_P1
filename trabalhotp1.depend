@@ -11,15 +11,15 @@
 	<regex>
 	"Dominios.h"
 
-1614209014 source:c:\users\ferna\desktop\trabalhotp1\dominios.cpp
+1614214948 source:c:\users\ferna\desktop\trabalhotp1\dominios.cpp
 	<iostream>
 	<regex>
 	"Dominios.h"
 
-1614208579 c:\users\ferna\desktop\trabalhotp1\dominios.h
+1614215476 c:\users\ferna\desktop\trabalhotp1\dominios.h
 	<stdexcept>
 
-1614209025 source:c:\users\ferna\desktop\trabalhotp1\main.cpp
+1614214897 source:c:\users\ferna\desktop\trabalhotp1\main.cpp
 	<iostream>
 	"Dominios.h"
 

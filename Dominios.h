@@ -62,7 +62,7 @@ class Moeda {
 ///
 /// Lanca excecao caso o valor informado seja invalido
 ///
-/// @param valor numero
+/// @param valor da moeda
 ///
 /// @throw invalid_argument
 ///
@@ -97,7 +97,7 @@ class Descricao{
 ///
 /// Lanca excecao caso o texto informado seja invalido
 ///
-/// @param valor string
+/// @param texto descricao
 ///
 /// @throw invalid_argument
 ///
@@ -116,14 +116,45 @@ inline string Descricao::getTexto(){
     return texto;
 }
 
+///
+/// Padrao para representacao do nome
+///
+/// Regras de formato:
+///
+/// - Nome de 5 a 25 caracteres podendo ser letras de A-Z a-z, ponto ou espaco.
+/// Pontos precedem letra, nao ha espacos em sequencia e primeira letra de cada termo eh maiuscula.
+///
 
+class Nome{
+    private:
+        string nome;
+        void validar(string nome);
+    public:
 
+///
+/// Armazena o nome
+///
+/// Lanca excecao caso o nome informado seja invalido
+///
+/// @param string nome
+///
+/// @throw invalid_argument
+///
 
+        void setNome(string nome);
 
+///
+/// Retorna o nome
+///
+/// @return string
+///
 
+        string getNome();
+};
 
-
-
+inline string Nome::getNome(){
+    return nome;
+}
 
 
 #endif // DOMINIOS_H_INCLUDED

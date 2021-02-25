@@ -7,7 +7,8 @@ using namespace std;
 //Definicoes de metodos da classe Numero
 
 void Numero::validar(int valor){
-    if(valor < 0 || valor > 20)
+    const int minimo = 0, maximo = 20;
+    if(valor < minimo || valor > maximo)
         throw invalid_argument("Argumento invalido. Valores apenas de 0 a 20");
 }
 
@@ -45,4 +46,19 @@ void Descricao::setTexto(string texto){
     this->texto = texto;
 }
 
-// Definicoes de metodos da classe
+// Definicoes de metodos da classe nome
+
+void Nome::validar(string nome){
+    regex nome_modelo("([A-Z][A-Za-z]*\\.? ?)+");
+    const int minimo = 5, maximo = 25;
+    bool tamanho_valido = (nome.length() >= minimo && nome.length() <= maximo) ? true : false;
+
+    if( !regex_match(nome, nome_modelo) || !tamanho_valido)
+        throw invalid_argument("Argumento invalido. Apenas 5 a 25 caracteres entre A-Z e a-z, ponto ou espaco.");
+
+}
+
+void Nome::setNome(string nome){
+    validar(nome);
+    this->nome = nome;
+}
