@@ -10,6 +10,7 @@ int main(){
     Nome nome;
     Classe classe;
     Endereco endereco;
+    Data data;
 
 
     //Testando classe Numero
@@ -79,6 +80,17 @@ int main(){
 
     cout << "Endereco: " << endereco.getEndereco() << endl;
 
+
+     //Testando classe Data
+
+    try{
+        data.setData("25-02-21");
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+    cout << "Data: " << data.getData() << endl;
 
     return 0;
 }

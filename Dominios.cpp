@@ -97,10 +97,12 @@ void Classe::setClasse(int valor){
 // Definicoes de metodos da classe Endereco
 
 void Endereco::validar(string endereco){
+    //expressao regular para verificar o formato do endereco
     regex endereco_modelo("([A-Za-z0-9]+\\.? ?)+");
     const int minimo = 5, maximo = 20;
     bool tamanho_valido = (endereco.length() >= minimo && endereco.length() <= maximo) ? true : false;
 
+    // valida formato do endereco e tamanho, caso invalido lanca excecao
     if(!regex_match(endereco, endereco_modelo) || !tamanho_valido)
         throw invalid_argument("Argumento invalido. Apenas 5 a 20 caracteres entre A-Z, a-z, 0-9, ponto ou espaco.");
 
@@ -109,4 +111,21 @@ void Endereco::validar(string endereco){
 void Endereco::setEndereco(string endereco){
     validar(endereco);
     this->endereco = endereco;
+}
+
+// Definicoes de metodos da classe Data
+
+void Data::validar(string data){
+    string DD = "(0[1-9]|[1-2][0-9]|3[0-1])";
+    string MM = "(0[1-9]|[1][0-2])";
+    string AA = "(2[1-9]|[3-9][0-9])";
+    regex data_modelo(DD+"-"+MM+"-"+AA);
+
+    if(!regex_match(data, data_modelo))
+        throw invalid_argument("Argumento invalido. Apenas datas no formato DD-MM-AA");
+}
+
+void Data::setData(string data){
+    validar(data);
+    this->data = data;
 }

@@ -218,6 +218,7 @@ inline string Classe::getClasse(){
 /// Regras de formato:
 ///
 /// - Nome de 5 a 20 caracteres podendo ser letras de A-Z a-z,digito 0-9, ponto ou espaco.
+///
 
 class Endereco {
     private:
@@ -250,5 +251,59 @@ class Endereco {
 
 inline string Endereco::getEndereco(){
     return endereco;
+}
+
+///
+/// Padrao para representacao da data
+///
+/// Regras de formato:
+///
+/// - Data formato DD-MM-AA onde DD de 01 a 31, MM de 01 a 12 e AA de 21 a 99
+///Data considera anos bissextos
+///
+
+class Data {
+    private:
+        string data;
+        bool bissexto;
+        void validar(string data);
+
+    public:
+
+///
+/// Armazena a data
+///
+/// Lanca excecao caso a data informada seja invalida
+///
+/// @param string data
+///
+/// @throw invalid_argument
+///
+
+        void setData(string data);
+
+///
+/// Retorna a data
+///
+/// @return string data
+///
+
+        string getData();
+
+///
+/// Retorna se o ano eh bissexto
+///
+/// @return bool
+///
+
+        bool isBissexto();
+};
+
+inline string Data::getData(){
+    return data;
+}
+
+inline bool Data::isBissexto(){
+    return bissexto;
 }
 #endif // DOMINIOS_H_INCLUDED
