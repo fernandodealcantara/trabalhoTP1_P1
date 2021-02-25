@@ -9,9 +9,10 @@ int main(){
     Descricao descricao;
     Nome nome;
     Classe classe;
+    Endereco endereco;
 
 
-    //Testando classe numero
+    //Testando classe Numero
     try{
         num.setValor(15);
     }
@@ -22,7 +23,7 @@ int main(){
     cout << "Numero: " << num.getValor() << endl;
 
 
-    //Testando classe moeda
+    //Testando classe Moeda
     try{
         moeda.setValor("542.000,00");
     }
@@ -33,7 +34,7 @@ int main(){
     cout << "Moeda: " << moeda.getValor() << endl;
 
 
-    //Testando classe descricao
+    //Testando classe Descricao
     try{
         descricao.setTexto("Casa grande e bem alocada.");
     }
@@ -44,7 +45,7 @@ int main(){
     cout << "Descricao: " << descricao.getTexto() << endl;
 
 
-    //Testando classe nome
+    //Testando classe Nome
     try{
         nome.setNome("Fernando A. Barreto");
     }
@@ -55,7 +56,7 @@ int main(){
     cout << "Nome: " << nome.getNome() << endl;
 
 
-    //Testando classe classe
+    //Testando classe Classe
 
     try{
         classe.setClasse(1);
@@ -65,6 +66,18 @@ int main(){
     }
 
     cout << "Classe: " << classe.getClasse() << endl;
+
+
+    //Testando classe Endereco
+
+    try{
+        endereco.setEndereco("2981 Springs Apt. 65");
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+    cout << "Endereco: " << endereco.getEndereco() << endl;
 
 
     return 0;

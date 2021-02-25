@@ -17,6 +17,7 @@ class Numero {
     private:
         int valor;
         void validar(int valor);
+
     public:
 
 ///
@@ -56,6 +57,7 @@ class Moeda {
     private:
         string valor;
         void validar(string valor);
+
     public:
 
 ///
@@ -96,6 +98,7 @@ class Descricao{
     private:
         string texto;
         void validar(string texto);
+
     public:
 
 ///
@@ -137,6 +140,7 @@ class Nome{
     private:
         string nome;
         void validar(string nome);
+
     public:
 
 ///
@@ -221,6 +225,7 @@ class Endereco {
         void validar(string endereco);
 
     public:
+
 ///
 /// Armazena o endereco
 ///
