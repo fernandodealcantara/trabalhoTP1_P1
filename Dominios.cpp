@@ -33,6 +33,7 @@ void Moeda::setValor(string valor){
 }
 
 // Definicoes de metodos da classe Descricao
+
 void Descricao::validar(string texto){
     // expressao regular para verificar o formato da descricao
     regex texto_modelo(".{5,30}\\.");
