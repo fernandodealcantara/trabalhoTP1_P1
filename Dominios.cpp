@@ -88,3 +88,20 @@ void Classe::setClasse(int valor){
 
     }
 }
+
+// Definicoes de metodos da classe endereco
+
+void Endereco::validar(string endereco){
+    regex endereco_modelo("([A-Z0-9][A-Za-z]*\\.? ?)+");
+    const int minimo = 5, maximo = 20;
+    bool tamanho_valido = (endereco.length() >= minimo && endereco.length() <= maximo) ? true : false;
+
+    if( !regex_match(endereco, endereco_modelo) || !tamanho_valido)
+        throw invalid_argument("Argumento invalido. Apenas 5 a 20 caracteres entre A-Z e a-z, 0-9, ponto ou espaco.");
+
+}
+
+void Endereco::setEndereco(string endereco){
+    validar(endereco);
+    this->endereco = endereco;
+}

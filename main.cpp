@@ -9,6 +9,7 @@ int main(){
     Descricao descricao;
     Nome nome;
     Classe classe;
+    Endereco endereco;
 
     //Testando classe numero
     try{
@@ -48,7 +49,6 @@ int main(){
     cout << "Nome: " << nome.getNome() << endl;
 
     //Testando classe classe
-
     try{
         classe.setClasse(1);
     }
@@ -56,5 +56,14 @@ int main(){
         cout << "Excecao: " << exp.what() << endl;
     }
     cout << "Classe: " << classe.getClasse() << endl;
+
+    //Testando classe endereco
+    try{
+        endereco.setEndereco("Rua Fernando Lira 2.");
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+    cout << "Endereco: " << endereco.getEndereco() << endl;
 
 }

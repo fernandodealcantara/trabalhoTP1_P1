@@ -197,5 +197,42 @@ inline string Classe::getClasse(){
     return classe;
 }
 
+///
+/// Padrao para representacao de endereço
+///
+/// Regras de formato:
+///
+/// - Nome de 5 a 20 caracteres podendo ser letras de A-Z a-z,digito 0-9, ponto ou espaco.
 
+class Endereco {
+    private:
+        string endereco;
+        void validar(string endereco);
+
+    public:
+///
+/// Armazena o endereco
+///
+/// Lanca excecao caso o endereco informado seja invalido
+///
+/// @param string endereco
+///
+/// @throw invalid_argument
+///
+
+        void setEndereco(string endereco);
+
+///
+/// Retorna o endereco
+///
+/// @return string endereco
+///
+
+        string getEndereco();
+
+};
+
+inline string Endereco::getEndereco(){
+    return endereco;
+}
 #endif // DOMINIOS_H_INCLUDED
