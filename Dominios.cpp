@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 //Definicoes de metodos da classe Numero
 
 void Numero::validar(int valor){
@@ -127,5 +128,11 @@ void Data::validar(string data){
 
 void Data::setData(string data){
     validar(data);
+    //ano em formato inteiro para verificar se eh bissexto
+    int ano = stoi(data.substr(6, 2));
+
+    this->bissexto = (ano % 4 == 0)? true: false;
     this->data = data;
 }
+
+

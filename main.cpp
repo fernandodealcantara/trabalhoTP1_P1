@@ -91,6 +91,7 @@ int main(){
     }
 
     cout << "Data: " << data.getData() << endl;
+    cout << "Eh ano bissexto: " << boolalpha << data.isBissexto() << endl;
 
     return 0;
 }
