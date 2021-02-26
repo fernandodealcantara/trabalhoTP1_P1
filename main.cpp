@@ -16,35 +16,35 @@ int main(){
 
     //Testando classe Numero
     try{
-        num.setValor(15);
+        num.setNumero(15);
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
 
-    cout << "Numero: " << num.getValor() << endl;
+    cout << "Numero: " << num.getNumero() << endl;
 
 
     //Testando classe Moeda
     try{
-        moeda.setValor("542.000,00");
+        moeda.setMoeda("542.000,00");
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
 
-    cout << "Moeda: " << moeda.getValor() << endl;
+    cout << "Moeda: " << moeda.getMoeda() << endl;
 
 
     //Testando classe Descricao
     try{
-        descricao.setTexto("Casa grande e bem alocada.");
+        descricao.setDescricao("Casa grande e bem alocada.");
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
 
-    cout << "Descricao: " << descricao.getTexto() << endl;
+    cout << "Descricao: " << descricao.getDescricao() << endl;
 
 
     //Testando classe Nome

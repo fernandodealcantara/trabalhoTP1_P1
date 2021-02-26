@@ -14,7 +14,7 @@ void Numero::validar(int valor){
         throw invalid_argument("Argumento invalido. Valores apenas de 0 a 20");
 }
 
-void Numero::setValor(int valor){
+void Numero::setNumero(int valor){
     validar(valor);
     this->valor = valor;
 }
@@ -30,7 +30,7 @@ void Moeda::validar(string valor){
         throw invalid_argument("Argumento invalido. Valores apenas de 0,00 a 1.000.000,00");
 }
 
-void Moeda::setValor(string valor){
+void Moeda::setMoeda(string valor){
     validar(valor);
     this->valor = valor;
 }
@@ -46,7 +46,7 @@ void Descricao::validar(string texto){
         throw invalid_argument("Argumento invalido. Descricao deve conter entre 5 e 30 caracteres e terminar em ponto.");
 }
 
-void Descricao::setTexto(string texto){
+void Descricao::setDescricao(string texto){
     validar(texto);
     this->texto = texto;
 }

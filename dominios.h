@@ -31,7 +31,7 @@ class Numero {
 /// @throw invalid_argument
 ///
 
-        void setValor(int valor);
+        void setNumero(int valor);
 
 ///
 /// Retorna valor
@@ -39,10 +39,10 @@ class Numero {
 /// @return valor
 ///
 
-        int getValor();
+        int getNumero();
 };
 
-inline int Numero::getValor(){
+inline int Numero::getNumero(){
     return valor;
 }
 
@@ -71,7 +71,7 @@ class Moeda {
 /// @throw invalid_argument
 ///
 
-        void setValor(string valor);
+        void setMoeda(string valor);
 
 ///
 /// Retorna valor da moeda
@@ -79,11 +79,11 @@ class Moeda {
 /// @return valor
 ///
 
-        string getValor();
+        string getMoeda();
 
 };
 
-inline string Moeda::getValor(){
+inline string Moeda::getMoeda(){
     return valor;
 }
 
@@ -112,7 +112,7 @@ class Descricao{
 /// @throw invalid_argument
 ///
 
-        void setTexto(string texto);
+        void setDescricao(string texto);
 
 ///
 /// Retorna o texto da descricao
@@ -120,11 +120,11 @@ class Descricao{
 /// @return string
 ///
 
-        string getTexto();
+        string getDescricao();
 
 };
 
-inline string Descricao::getTexto(){
+inline string Descricao::getDescricao(){
     return texto;
 }
 
