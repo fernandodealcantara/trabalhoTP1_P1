@@ -213,7 +213,7 @@ inline string Classe::getClasse(){
 }
 
 ///
-/// Padrao para representacao de endereço
+/// Padrao para representacao de endereÃ§o
 ///
 /// Regras de formato:
 ///
