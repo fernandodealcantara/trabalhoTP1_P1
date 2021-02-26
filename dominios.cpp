@@ -117,6 +117,7 @@ void Endereco::setEndereco(string endereco){
 // Definicoes de metodos da classe Data
 
 void Data::validar(string data){
+    //Expressoes regulares para validar dia(DD), mes(MM) e ano(AA)
     string DD = "(0[1-9]|[1-2][0-9]|3[0-1])";
     string MM = "(0[1-9]|[1][0-2])";
     string AA = "(2[1-9]|[3-9][0-9])";
@@ -135,4 +136,19 @@ void Data::setData(string data){
     this->data = data;
 }
 
+// Definicoes de metodos da classe Codigo
+
+void Codigo::validar(string codigo){
+    //expressao regular para validar codigo
+    regex codigo_modelo("[A-Z0-9]{5}");
+    string codigo_invalido = "00000";
+
+    if(!regex_match(codigo, codigo_modelo) || codigo == codigo_invalido)
+        throw invalid_argument("Argumento invalido. Apenas codigo no formato XXXXX, X eh caractere de A-Z ou 0-9");
+}
+
+void Codigo::setCodigo(string codigo){
+    validar(codigo);
+    this->codigo = codigo;
+}
 

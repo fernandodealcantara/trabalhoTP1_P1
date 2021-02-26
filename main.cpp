@@ -11,6 +11,7 @@ int main(){
     Classe classe;
     Endereco endereco;
     Data data;
+    Codigo codigo;
 
 
     //Testando classe Numero
@@ -92,6 +93,18 @@ int main(){
 
     cout << "Data: " << data.getData() << endl;
     cout << "Eh ano bissexto: " << boolalpha << data.isBissexto() << endl;
+
+
+    //Testando classe Codigo
+
+    try{
+        codigo.setCodigo("00A1B");
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+    cout << "Codigo: " << codigo.getCodigo() << endl;
 
     return 0;
 }

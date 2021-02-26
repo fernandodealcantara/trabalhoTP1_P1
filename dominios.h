@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 ///
 /// Padrao para representacao de numero
 ///
@@ -12,7 +13,7 @@ using namespace std;
 ///
 /// - Numero valido apenas de 0 a 20
 ///
-
+// Classe Numero feita por Fernando Mat: 190125586
 class Numero {
     private:
         int valor;
@@ -52,7 +53,7 @@ inline int Numero::getValor(){
 ///
 /// - Moeda valida apenas de 0,00 a 1.000.000,00
 ///
-
+// Classe Moeda feita por Fernando Mat: 190125586
 class Moeda {
     private:
         string valor;
@@ -93,7 +94,7 @@ inline string Moeda::getValor(){
 ///
 /// - Descricoes aceitam 5 a 30 caracteres e eh terminado por ponto.
 ///
-
+// Classe Descricao feita por Fernando Mat: 190125586
 class Descricao{
     private:
         string texto;
@@ -135,7 +136,7 @@ inline string Descricao::getTexto(){
 /// - Nome de 5 a 25 caracteres podendo ser letras de A-Z a-z, ponto ou espaco.
 /// Pontos precedem letra, nao ha espacos em sequencia e primeira letra de cada termo eh maiuscula.
 ///
-
+// Classe Nome feita por Fernando Mat: 190125586
 class Nome{
     private:
         string nome;
@@ -175,7 +176,7 @@ inline string Nome::getNome(){
 ///
 /// - 1 para apartamento, 2 para casa e 3 para quarto.
 ///
-
+// Classe Classe feita por Andre Mat: 190084197
 class Classe{
     private:
         const static int APARTAMENTO = 1;
@@ -219,7 +220,7 @@ inline string Classe::getClasse(){
 ///
 /// - Nome de 5 a 20 caracteres podendo ser letras de A-Z a-z,digito 0-9, ponto ou espaco.
 ///
-
+// Classe Endereco feita por Andre Mat: 190084197
 class Endereco {
     private:
         string endereco;
@@ -261,7 +262,7 @@ inline string Endereco::getEndereco(){
 /// - Data formato DD-MM-AA onde DD de 01 a 31, MM de 01 a 12 e AA de 21 a 99
 ///Data considera anos bissextos
 ///
-
+// Classe Data feita por Fernando Mat: 190125586
 class Data {
     private:
         string data;
@@ -306,4 +307,46 @@ inline string Data::getData(){
 inline bool Data::isBissexto(){
     return bissexto;
 }
+
+///
+/// Padrao para representacao do codigo
+///
+/// Regras de formato:
+///
+/// - Formato XXXXX, X eh letra maiuscula A-Z ou digito 0-9, codigo nao eh 00000
+///
+// Classe Codigo feita por Fernando Mat: 190125586
+class Codigo {
+    private:
+        string codigo;
+        void validar(string codigo);
+
+    public:
+
+///
+/// Armazena o codigo
+///
+/// Lanca excecao caso o codigo esteja em formato invalido
+///
+/// @param string codigo
+///
+/// @throw invalid_argument
+///
+
+        void setCodigo(string codigo);
+
+///
+/// Retorna o codigo
+///
+/// @return string codigo
+///
+
+        string getCodigo();
+};
+
+inline string Codigo::getCodigo(){
+    return codigo;
+}
+
+
 #endif // DOMINIOS_H_INCLUDED
