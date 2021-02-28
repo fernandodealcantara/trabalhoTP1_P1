@@ -348,5 +348,86 @@ inline string Codigo::getCodigo(){
     return codigo;
 }
 
+///
+/// Padrao para representacao da senha
+///
+/// Regras de formato:
+///
+/// - Formato XXXXXX, X eh letra maiuscula ou minuscula de A-Z, a-z ou digito 0-9
+/// Nao pode haver caractere repetido, deve ter pelo menos uma letra maiuscula, uma minuscula e um digito
+///
+// Classe Senha feita por Fernando Mat: 190125586
+class Senha {
+    private:
+        string senha;
+        void validar(string senha);
+
+    public:
+
+///
+/// Armazena a senha
+///
+/// Lanca excecao caso a senha esteja em formato invalido
+///
+/// @param string senha
+///
+/// @throw invalid_argument
+///
+
+        void setSenha(string senha);
+
+///
+/// Retorna a senha
+///
+/// @return string senha
+///
+
+        string getSenha();
+};
+
+inline string Senha::getSenha(){
+    return senha;
+}
+
+///
+/// Padrao para representacao do email
+///
+/// Regras de formato:
+///
+/// - Formato nome@dominio, onde nome eh composto por ateh 10 caracteres e dominio eh composto por ateh 20 caracteres
+/// Valido apenas caracteres de A-Z, a-z, 0-9 ou ponto. Nao ha pontos em sequencia
+///
+// Classe Email feita por Fernando Mat: 190125586
+class Email {
+    private:
+        string email;
+        void validar(string email);
+
+    public:
+
+///
+/// Armazena o email
+///
+/// Lanca excecao caso o email esteja em formato invalido
+///
+/// @param string email
+///
+/// @throw invalid_argument
+///
+
+        void setEmail(string email);
+
+///
+/// Retorna o email
+///
+/// @return string email
+///
+
+        string getEmail();
+};
+
+inline string Email::getEmail(){
+    return email;
+}
 
 #endif // DOMINIOS_H_INCLUDED

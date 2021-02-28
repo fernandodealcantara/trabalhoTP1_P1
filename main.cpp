@@ -12,6 +12,8 @@ int main(){
     Endereco endereco;
     Data data;
     Codigo codigo;
+    Senha senha;
+    Email email;
 
 
     //Testando classe Numero
@@ -85,7 +87,7 @@ int main(){
      //Testando classe Data
 
     try{
-        data.setData("25-02-21");
+        data.setData("28-02-21");
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
@@ -105,6 +107,30 @@ int main(){
     }
 
     cout << "Codigo: " << codigo.getCodigo() << endl;
+
+
+    //Testando classe Senha
+
+    try{
+        senha.setSenha("abBC15");
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+    cout << "Senha: " << senha.getSenha() << endl;
+
+
+    //Testando classe Email
+
+    try{
+        email.setEmail("abBC15");
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+    cout << "Email: " << email.getEmail() << endl;
 
     return 0;
 }
