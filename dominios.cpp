@@ -200,3 +200,18 @@ void Senha::setSenha(string senha){
     validar(senha);
     this->senha = senha;
 }
+
+// Definicoes de metodos da classe Email
+
+void Email::validar(string email){
+    // expressao regular para validar formato do email
+    regex email_modelo("([A-Za-z0-9]\\.?){1,10}@([A-Za-z0-9]\\.?){1,20}");
+
+    if(!regex_match(email, email_modelo))
+        throw invalid_argument("Email invalido. Apenas caracteres alfunumericos ou ponto no formato nome@dominio");
+}
+
+void Email::setEmail(string email){
+    validar(email);
+    this->email = email;
+}

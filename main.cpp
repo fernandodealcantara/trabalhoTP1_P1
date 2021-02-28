@@ -124,7 +124,7 @@ int main(){
     //Testando classe Email
 
     try{
-        email.setEmail("abBC15");
+        email.setEmail("nome.nome2@dominio");
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
