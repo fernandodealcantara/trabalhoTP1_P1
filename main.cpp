@@ -14,7 +14,7 @@ int main(){
     Codigo codigo;
     Senha senha;
     Email email;
-
+    Telefone telefone;
 
     //Testando classe Numero
     try{
@@ -131,6 +131,18 @@ int main(){
     }
 
     cout << "Email: " << email.getEmail() << endl;
+
+
+    //Testando classe Telefone
+
+    try{
+        telefone.setTelefone("(015)-497815000");
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+    cout << "Telefone: " << telefone.getTelefone() << endl;
 
     return 0;
 }

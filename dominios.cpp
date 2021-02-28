@@ -215,3 +215,20 @@ void Email::setEmail(string email){
     validar(email);
     this->email = email;
 }
+
+// Definicoes de metodos da classe Telefone
+
+void Telefone::validar(string telefone){
+    // expressao regular para validar formato do telefone
+    regex telefone_modelo("\\([0-9]{3}\\)-[0-9]{9}");
+    string telefone_invalido = "(000)-000000000";
+
+    if(!regex_match(telefone, telefone_modelo) || telefone == telefone_invalido)
+        throw invalid_argument("Telefone invalido. Apenas digitos de 0-9 no formato (XXX)-XXXXXXXXX");
+
+}
+
+void Telefone::setTelefone(string telefone){
+    validar(telefone);
+    this->telefone = telefone;
+}

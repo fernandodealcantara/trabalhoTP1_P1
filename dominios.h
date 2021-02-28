@@ -430,4 +430,44 @@ inline string Email::getEmail(){
     return email;
 }
 
+///
+/// Padrao para representacao do telefone
+///
+/// Regras de formato:
+///
+/// - Formato (XXX)-XXXXXXXXX, onde cada X eh digito de 0-9. Note que numero nao eh (000)-000000000
+///
+// Classe Telefone feita por Fernando Mat: 190125586
+class Telefone {
+    private:
+        string telefone;
+        void validar(string telefone);
+
+    public:
+
+///
+/// Armazena o telefone
+///
+/// Lanca excecao caso o telefone esteja em formato invalido
+///
+/// @param string telefone
+///
+/// @throw invalid_argument
+///
+
+        void setTelefone(string telefone);
+
+///
+/// Retorna o telefone
+///
+/// @return string telefone
+///
+
+        string getTelefone();
+};
+
+inline string Telefone::getTelefone(){
+    return telefone;
+}
+
 #endif // DOMINIOS_H_INCLUDED
