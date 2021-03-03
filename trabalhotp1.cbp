@@ -31,10 +31,19 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Dominios.cpp" />
-		<Unit filename="Dominios.h" />
+		<Unit filename="dominios.cpp" />
+		<Unit filename="dominios.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
 			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
