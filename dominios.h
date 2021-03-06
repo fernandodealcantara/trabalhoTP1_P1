@@ -7,11 +7,11 @@ using namespace std;
 
 
 ///
-/// Padrao para representacao de numero
+/// Padrão para representação do número
 ///
 /// Regras de formato:
 ///
-/// - Numero valido apenas de 0 a 20
+/// - Número valido apenas inteiro de 0 a 20
 ///
 // Classe Numero feita por Fernando Mat: 190125586
 class Numero {
@@ -24,7 +24,7 @@ class Numero {
 ///
 /// Armazena o numero informado caso o mesmo seja valido
 ///
-/// Lanca excecao caso o valor informado seja invalido
+/// Lança exceção caso o número informado seja invalido
 ///
 /// @param valor numero
 ///
@@ -64,7 +64,7 @@ class Moeda {
 ///
 /// Armazena o valor informado caso o mesmo seja valido
 ///
-/// Lanca excecao caso o valor informado seja invalido
+/// Lança exceção caso o valor informado seja invalido
 ///
 /// @param valor da moeda
 ///
@@ -88,11 +88,11 @@ inline string Moeda::getMoeda(){
 }
 
 ///
-/// Padrao para representacao da descricao
+/// Padrão para representação da descrição
 ///
 /// Regras de formato:
 ///
-/// - Descricoes aceitam 5 a 30 caracteres e eh terminado por ponto.
+/// - Descrições aceitam 5 a 30 caracteres e são terminadas por ponto.
 ///
 // Classe Descricao feita por Fernando Mat: 190125586
 class Descricao{
@@ -103,9 +103,9 @@ class Descricao{
     public:
 
 ///
-/// Armazena o texto da descricao
+/// Armazena o texto da descrição
 ///
-/// Lanca excecao caso o texto informado seja invalido
+/// Lança exceção caso o texto da descrição informado seja invalido.
 ///
 /// @param texto descricao
 ///
@@ -115,7 +115,7 @@ class Descricao{
         void setDescricao(string texto);
 
 ///
-/// Retorna o texto da descricao
+/// Retorna o texto da descrição
 ///
 /// @return string
 ///
@@ -129,12 +129,12 @@ inline string Descricao::getDescricao(){
 }
 
 ///
-/// Padrao para representacao do nome
+/// Padrão para representação do nome
 ///
 /// Regras de formato:
 ///
-/// - Nome de 5 a 25 caracteres podendo ser letras de A-Z a-z, ponto ou espaco.
-/// Pontos precedem letra, nao ha espacos em sequencia e primeira letra de cada termo eh maiuscula.
+/// - Nome de 5 a 25 caracteres podendo ser letras de A-Z maiúsculas e minúsculas, ponto ou espaço.
+/// Pontos precedem letra, não há espaços em sequência e a primeira letra de cada termo é maiúscula.
 ///
 // Classe Nome feita por Fernando Mat: 190125586
 class Nome{
@@ -147,7 +147,7 @@ class Nome{
 ///
 /// Armazena o nome
 ///
-/// Lanca excecao caso o nome informado seja invalido
+/// Lança exceção caso o nome informado seja invalido.
 ///
 /// @param string nome
 ///
@@ -170,7 +170,7 @@ inline string Nome::getNome(){
 }
 
 ///
-/// Padrao para representacao de classe
+/// Padrão para representação de classe
 ///
 /// Regras de formato:
 ///
@@ -188,9 +188,9 @@ class Classe{
     public:
 
 ///
-/// Armazena o numero informado e caso o mesmo seja valido atribui uma classe
+/// Armazena o número informado e caso o mesmo seja valido atribui uma classe
 ///
-/// Lanca excecao caso o valor informado seja invalido
+/// Lança exceção caso o valor informado seja invalido
 ///
 /// @param valor classe
 ///
@@ -214,11 +214,11 @@ inline int Classe::getClasse(){
 }
 
 ///
-/// Padrao para representacao de endereço
+/// Padrão para representação do endereço
 ///
 /// Regras de formato:
 ///
-/// - Nome de 5 a 20 caracteres podendo ser letras de A-Z a-z,digito 0-9, ponto ou espaco.
+/// - Texto de 5 a 20 caracteres podendo ser letras (A-Z e a-z), digito (0-9), ponto ou espaço.
 ///
 // Classe Endereco feita por Andre Mat: 190084197
 class Endereco {
@@ -229,9 +229,9 @@ class Endereco {
     public:
 
 ///
-/// Armazena o endereco
+/// Armazena o endereço
 ///
-/// Lanca excecao caso o endereco informado seja invalido
+/// Lança exceção caso o endereço informado seja invalido
 ///
 /// @param string endereco
 ///
@@ -241,7 +241,7 @@ class Endereco {
         void setEndereco(string endereco);
 
 ///
-/// Retorna o endereco
+/// Retorna o endereço
 ///
 /// @return string endereco
 ///
@@ -255,12 +255,12 @@ inline string Endereco::getEndereco(){
 }
 
 ///
-/// Padrao para representacao da data
+/// Padrão para representação da data
 ///
 /// Regras de formato:
 ///
 /// - Data formato DD-MM-AA onde DD de 01 a 31, MM de 01 a 12 e AA de 21 a 99
-///Data considera anos bissextos
+/// Data considera anos bissextos e meses com 30 e 31 dias.
 ///
 // Classe Data feita por Fernando Mat: 190125586
 class Data {
@@ -274,7 +274,7 @@ class Data {
 ///
 /// Armazena a data
 ///
-/// Lanca excecao caso a data informada seja invalida
+/// Lança exceção caso a data informada seja invalida.
 ///
 /// @param string data
 ///
@@ -292,7 +292,7 @@ class Data {
         string getData();
 
 ///
-/// Retorna se o ano eh bissexto
+/// Retorna se o ano é bissexto
 ///
 /// @return bool
 ///
@@ -309,11 +309,11 @@ inline bool Data::isBissexto(){
 }
 
 ///
-/// Padrao para representacao do codigo
+/// Padrão para representação do código
 ///
 /// Regras de formato:
 ///
-/// - Formato XXXXX, X eh letra maiuscula A-Z ou digito 0-9, codigo nao eh 00000
+/// - Formato XXXXX, X é letra maiúscula A-Z ou digito 0-9. Note que 00000 é um código invalido.
 ///
 // Classe Codigo feita por Fernando Mat: 190125586
 class Codigo {
@@ -324,9 +324,9 @@ class Codigo {
     public:
 
 ///
-/// Armazena o codigo
+/// Armazena o código
 ///
-/// Lanca excecao caso o codigo esteja em formato invalido
+/// Lança exceção caso o código esteja em formato invalido
 ///
 /// @param string codigo
 ///
@@ -349,12 +349,12 @@ inline string Codigo::getCodigo(){
 }
 
 ///
-/// Padrao para representacao da senha
+/// Padrão para representação da senha
 ///
 /// Regras de formato:
 ///
-/// - Formato XXXXXX, X eh letra maiuscula ou minuscula de A-Z, a-z ou digito 0-9
-/// Nao pode haver caractere repetido, deve ter pelo menos uma letra maiuscula, uma minuscula e um digito
+/// - Formato XXXXXX, X é letra maiúscula ou minúscula de A-Z, a-z ou digito 0-9.
+/// Não pode haver caractere repetido, deve ter pelo menos uma letra maiúscula, uma minúscula e um digito.
 ///
 // Classe Senha feita por Fernando Mat: 190125586
 class Senha {
@@ -367,7 +367,7 @@ class Senha {
 ///
 /// Armazena a senha
 ///
-/// Lanca excecao caso a senha esteja em formato invalido
+/// Lança exceção caso a senha esteja em formato invalido
 ///
 /// @param string senha
 ///
@@ -390,12 +390,12 @@ inline string Senha::getSenha(){
 }
 
 ///
-/// Padrao para representacao do email
+/// Padrão para representação do email
 ///
 /// Regras de formato:
 ///
-/// - Formato nome@dominio, onde nome eh composto por ateh 10 caracteres e dominio eh composto por ateh 20 caracteres
-/// Valido apenas caracteres de A-Z, a-z, 0-9 ou ponto. Nao ha pontos em sequencia
+/// - Formato nome@dominio, onde o nome é composto por até 10 caracteres e dominio é composto por até 20 caracteres.
+/// Valido apenas caracteres de A-Z, a-z, 0-9 ou ponto. Nao há pontos em sequência.
 ///
 // Classe Email feita por Fernando Mat: 190125586
 class Email {
@@ -408,7 +408,7 @@ class Email {
 ///
 /// Armazena o email
 ///
-/// Lanca excecao caso o email esteja em formato invalido
+/// Lança exceção caso o email esteja em formato invalido.
 ///
 /// @param string email
 ///
@@ -431,11 +431,11 @@ inline string Email::getEmail(){
 }
 
 ///
-/// Padrao para representacao do telefone
+/// Padrão para representação do telefone
 ///
 /// Regras de formato:
 ///
-/// - Formato (XXX)-XXXXXXXXX, onde cada X eh digito de 0-9. Note que numero nao eh (000)-000000000
+/// - Formato (XXX)-XXXXXXXXX, onde cada X eh digito de 0-9. Note que número não é (000)-000000000.
 ///
 // Classe Telefone feita por Fernando Mat: 190125586
 class Telefone {
@@ -448,7 +448,7 @@ class Telefone {
 ///
 /// Armazena o telefone
 ///
-/// Lanca excecao caso o telefone esteja em formato invalido
+/// Lança exceção caso o telefone esteja em formato invalido.
 ///
 /// @param string telefone
 ///

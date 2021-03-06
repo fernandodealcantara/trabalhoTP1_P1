@@ -62,7 +62,6 @@ void Nome::validar(string nome){
     // valida formato do nome e tamanho, caso invalido lanca excecao
     if(!regex_match(nome, nome_modelo) || !tamanho_valido)
         throw invalid_argument("Nome invalido. Apenas 5 a 25 caracteres entre A-Z e a-z, ponto ou espaco.");
-
 }
 
 void Nome::setNome(string nome){
@@ -92,9 +91,6 @@ void Classe::setClasse(int valor){
             this->classe = valor;
             break;
     }
-
-
-
 }
 
 // Definicoes de metodos da classe Endereco
@@ -108,7 +104,6 @@ void Endereco::validar(string endereco){
     // valida formato do endereco e tamanho, caso invalido lanca excecao
     if(!regex_match(endereco, endereco_modelo) || !tamanho_valido)
         throw invalid_argument("Endereco invalido. Apenas 5 a 20 caracteres entre A-Z, a-z, 0-9, ponto ou espaco.");
-
 }
 
 void Endereco::setEndereco(string endereco){

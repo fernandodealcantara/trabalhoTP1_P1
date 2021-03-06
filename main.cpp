@@ -1,11 +1,11 @@
 #include <iostream>
-#include "dominios.h"
-#include "teste_dominio.h"
+#include "dominios.h" // Dominios que vao ser testados
+#include "teste_dominio.h" // Testes para testar os dominios da classe dominios.h
 
 using namespace std;
 
 int main(){
-
+    // Instancias para teste de dominio
     TUNumero testeNumero;
     TUMoeda testeMoeda;
     TUDescricao testeDescricao;
@@ -108,4 +108,5 @@ int main(){
                                 break;
     }
 
+    return 0;
 }
