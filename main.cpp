@@ -1,148 +1,111 @@
 #include <iostream>
 #include "dominios.h"
+#include "teste_dominio.h"
 
 using namespace std;
 
 int main(){
-    Numero num;
-    Moeda moeda;
-    Descricao descricao;
-    Nome nome;
-    Classe classe;
-    Endereco endereco;
-    Data data;
-    Codigo codigo;
-    Senha senha;
-    Email email;
-    Telefone telefone;
 
-    //Testando classe Numero
-    try{
-        num.setNumero(15);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
+    TUNumero testeNumero;
+    TUMoeda testeMoeda;
+    TUDescricao testeDescricao;
+    TUNome testeNome;
+    TUClasse testeClasse;
+    TUEndereco testeEndereco;
+    TUData testeData;
+    TUCodigo testeCodigo;
+    TUSenha testeSenha;
+    TUEmail testeEmail;
+    TUTelefone testeTelefone;
 
-    cout << "Numero: " << num.getNumero() << endl;
-
-
-    //Testando classe Moeda
-    try{
-        moeda.setMoeda("542.000,00");
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Numero
+    switch(testeNumero.run()){
+        case TUNumero::SUCESSO: cout << "SUCESSO - NUMERO" << endl;
+                                break;
+        case TUNumero::FALHA  : cout << "FALHA   - NUMERO" << endl;
+                                break;
     }
 
-    cout << "Moeda: " << moeda.getMoeda() << endl;
-
-
-    //Testando classe Descricao
-    try{
-        descricao.setDescricao("Casa grande e bem alocada.");
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Moeda
+    switch(testeMoeda.run()){
+        case TUMoeda::SUCESSO: cout << "SUCESSO - MOEDA" << endl;
+                                break;
+        case TUMoeda::FALHA  : cout << "FALHA   - MOEDA" << endl;
+                                break;
     }
 
-    cout << "Descricao: " << descricao.getDescricao() << endl;
-
-
-    //Testando classe Nome
-    try{
-        nome.setNome("Fernando A. Barreto");
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Descricao
+    switch(testeDescricao.run()){
+        case TUDescricao::SUCESSO: cout << "SUCESSO - DESCRICAO" << endl;
+                                break;
+        case TUDescricao::FALHA  : cout << "FALHA   - DESCRICAO" << endl;
+                                break;
     }
 
-    cout << "Nome: " << nome.getNome() << endl;
-
-
-    //Testando classe Classe
-
-    try{
-        classe.setClasse(1);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Nome
+    switch(testeNome.run()){
+        case TUNome::SUCESSO: cout << "SUCESSO - NOME" << endl;
+                                break;
+        case TUNome::FALHA  : cout << "FALHA   - NOME" << endl;
+                                break;
     }
 
-    cout << "Classe: " << classe.getClasse() << endl;
 
-
-    //Testando classe Endereco
-
-    try{
-        endereco.setEndereco("2981 Springs Apt. 65");
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Classe
+    switch(testeClasse.run()){
+        case TUClasse::SUCESSO: cout << "SUCESSO - CLASSE" << endl;
+                                break;
+        case TUClasse::FALHA  : cout << "FALHA   - CLASSE" << endl;
+                                break;
     }
 
-    cout << "Endereco: " << endereco.getEndereco() << endl;
 
-
-     //Testando classe Data
-
-    try{
-        data.setData("28-02-21");
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Endereco
+    switch(testeEndereco.run()){
+        case TUEndereco::SUCESSO: cout << "SUCESSO - ENDERECO" << endl;
+                                break;
+        case TUEndereco::FALHA  : cout << "FALHA   - ENDERECO" << endl;
+                                break;
     }
 
-    cout << "Data: " << data.getData() << endl;
-    cout << "Eh ano bissexto: " << boolalpha << data.isBissexto() << endl;
-
-
-    //Testando classe Codigo
-
-    try{
-        codigo.setCodigo("00A1B");
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Data
+    switch(testeData.run()){
+        case TUData::SUCESSO: cout << "SUCESSO - DATA" << endl;
+                                break;
+        case TUData::FALHA  : cout << "FALHA   - DATA" << endl;
+                                break;
     }
 
-    cout << "Codigo: " << codigo.getCodigo() << endl;
-
-
-    //Testando classe Senha
-
-    try{
-        senha.setSenha("abBC15");
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Codigo
+    switch(testeCodigo.run()){
+        case TUCodigo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUCodigo::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
     }
 
-    cout << "Senha: " << senha.getSenha() << endl;
-
-
-    //Testando classe Email
-
-    try{
-        email.setEmail("nome.nome2@dominio");
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Senha
+    switch(testeSenha.run()){
+        case TUSenha::SUCESSO: cout << "SUCESSO - SENHA" << endl;
+                                break;
+        case TUSenha::FALHA  : cout << "FALHA   - SENHA" << endl;
+                                break;
     }
 
-    cout << "Email: " << email.getEmail() << endl;
-
-
-    //Testando classe Telefone
-
-    try{
-        telefone.setTelefone("(015)-497815000");
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
+    //Testando domínio Email
+    switch(testeEmail.run()){
+        case TUEmail::SUCESSO: cout << "SUCESSO - EMAIL" << endl;
+                                break;
+        case TUEmail::FALHA  : cout << "FALHA   - EMAIL" << endl;
+                                break;
     }
 
-    cout << "Telefone: " << telefone.getTelefone() << endl;
+    //Testando domínio Telefone
+    switch(testeTelefone.run()){
+        case TUTelefone::SUCESSO: cout << "SUCESSO - TELEFONE" << endl;
+                                break;
+        case TUTelefone::FALHA  : cout << "FALHA   - TELEFONE" << endl;
+                                break;
+    }
 
-    return 0;
 }
