@@ -34,8 +34,6 @@
 		<Unit filename="dominios.cpp" />
 		<Unit filename="dominios.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="teste.cpp" />
-		<Unit filename="teste.h" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />

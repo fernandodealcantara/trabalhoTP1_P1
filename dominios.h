@@ -182,7 +182,7 @@ class Classe{
         const static int APARTAMENTO = 1;
         const static int CASA = 2;
         const static int QUARTO = 3;
-        int classe;
+        string classe;
         void validar(int valor);
 
     public:
@@ -205,11 +205,11 @@ class Classe{
 /// @return classe
 ///
 
-        int getClasse();
+        string getClasse();
 
 };
 
-inline int Classe::getClasse(){
+inline string Classe::getClasse(){
     return classe;
 }
 

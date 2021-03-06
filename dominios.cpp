@@ -81,20 +81,18 @@ void Classe::setClasse(int valor){
     validar(valor);
     switch(valor){
         case 1:
-            this->classe = valor;
+            this->classe = "apartamento";
             break;
 
         case 2:
-            this->classe = valor;
+            this->classe = "casa";
             break;
 
         case 3:
-            this->classe = valor;
+            this->classe = "quarto";
             break;
+
     }
-
-
-
 }
 
 // Definicoes de metodos da classe Endereco
