@@ -1,11 +1,12 @@
 #include <iostream>
 #include "dominios.h" // Dominios que vao ser testados
 #include "teste_dominio.h" // Testes para testar os dominios da classe dominios.h
+#include "entidades.h" // Entidades que vao ser testadas
 
 using namespace std;
 
 int main(){
-    // Instancias para teste de dominio
+    // Instancias para testes de dominios
     TUNumero testeNumero;
     TUMoeda testeMoeda;
     TUDescricao testeDescricao;
@@ -17,6 +18,8 @@ int main(){
     TUSenha testeSenha;
     TUEmail testeEmail;
     TUTelefone testeTelefone;
+    // Instancias para testes de entidades
+    Usuario usuario;
 
     //Testando domínio Numero
     switch(testeNumero.run()){
@@ -107,6 +110,30 @@ int main(){
         case TUTelefone::FALHA  : cout << "FALHA   - TELEFONE" << endl;
                                 break;
     }
+
+    // TESTES DAS ENTIDADES
+    // ENTIDADE USUARIO
+    // dominios necessarios
+    Nome nome;
+    Email email;
+    Senha senha;
+    Telefone telefone;
+    // Inicializacao os dominios do usuario
+    nome.setNome("Fernando");
+    email.setEmail("fer@dominio");
+    senha.setSenha("123abD");
+    telefone.setTelefone("(013)-123456789");
+    // Armazenando os dados do usuario
+    usuario.setNome(nome);
+    usuario.setEmail(email);
+    usuario.setSenha(senha);
+    usuario.setTelefone(telefone);
+    // Visualizando os dados do usuario
+    cout << usuario.getNome().getNome() << endl;
+    cout << usuario.getEmail().getEmail() << endl;
+    cout << usuario.getSenha().getSenha() << endl;
+    cout << usuario.getTelefone().getTelefone() << endl;
+
 
     return 0;
 }
