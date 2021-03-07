@@ -7,8 +7,9 @@ Andre Ivan - 190084197 //
 Fernando de Alcantara - 190125586 //
 Victor Hugo - 190129794
 
+# Autores de cada classe:
 
-Domínios feitos por:
+Domínios:
 - Andre - 190084197:
     Endereço e classe.
 - Fernando - 190125586:
@@ -16,11 +17,11 @@ Domínios feitos por:
 - Victor Hugo - 190129794:
     Numero e código.
     
-Testes de unidade dos domínios:
+Testes de unidade:
 - Andre - 190084197:
     Endereço, classe, moeda, descrição, nome, data, senha, email, telefone, numero e código.
 
-Entidades feitas por:
+Entidades:
 - Fernando - 190125586:
     Usuário.
 - Victor Hugo - 190129794:
