@@ -1,5 +1,5 @@
-#ifndef TESTE_DOMINIO_H_INCLUDED
-#define TESTE_DOMINIO_H_INCLUDED
+#ifndef TESTES_DOMINIOS_H_INCLUDED
+#define TESTES_DOMINIOS_H_INCLUDED
 
 #include "dominios.h"
 
@@ -8,7 +8,7 @@ using namespace std;
 
 
 // Declaração de classe de teste de unidade do domínio Numero.
-
+// Classe feita por Andre Mat: 190084197
 class TUNumero {
 
 private:
@@ -44,7 +44,7 @@ public:
 };
 
 // Declaração de classe de teste de unidade do domínio Moeda.
-
+// Classe feita por Andre Mat: 190084197
 class TUMoeda {
 
 private:
@@ -80,7 +80,7 @@ public:
 };
 
 // Declaração de classe de teste de unidade do domínio Descricao.
-
+// Classe feita por Andre Mat: 190084197
 class TUDescricao {
 
 private:
@@ -116,7 +116,7 @@ public:
 };
 
 // Declaração de classe de teste de unidade do domínio Nome.
-
+// Classe feita por Andre Mat: 190084197
 class TUNome {
 
 private:
@@ -152,7 +152,7 @@ public:
 };
 
 // Declaração de classe de teste de unidade do domínio Classe.
-
+// Classe feita por Andre Mat: 190084197
 class TUClasse {
 
 private:
@@ -188,7 +188,7 @@ public:
 };
 
 // Declaração de classe de teste de unidade do domínio Endereco.
-
+// Classe feita por Andre Mat: 190084197
 class TUEndereco {
 
 private:
@@ -224,7 +224,7 @@ public:
 };
 
 // Declaração de classe de teste de unidade do domínio Data.
-
+// Classe feita por Andre Mat: 190084197
 class TUData {
 
 private:
@@ -258,8 +258,9 @@ public:
 
     int run();
 };
-// Declaração de classe de teste de unidade do domínio Codigo.
 
+// Declaração de classe de teste de unidade do domínio Codigo.
+// Classe feita por Andre Mat: 190084197
 class TUCodigo {
 
 private:
@@ -295,7 +296,7 @@ public:
 };
 
 // Declaração de classe de teste de unidade do domínio Senha.
-
+// Classe feita por Andre Mat: 190084197
 class TUSenha {
 
 private:
@@ -331,7 +332,7 @@ public:
 };
 
 // Declaração de classe de teste de unidade do domínio Email.
-
+// Classe feita por Andre Mat: 190084197
 class TUEmail {
 
 private:
@@ -367,7 +368,7 @@ public:
 };
 
 // Declaração de classe de teste de unidade do domínio Telefone.
-
+// Classe feita por Andre Mat: 190084197
 class TUTelefone {
 
 private:
@@ -401,5 +402,5 @@ public:
 
     int run();
 };
-#endif // TESTE_DOMINIO_H_INCLUDED
+#endif // TESTES_DOMINIOS_H_INCLUDED
 

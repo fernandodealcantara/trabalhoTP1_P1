@@ -1,7 +1,9 @@
 #include <iostream>
+
 #include "dominios.h" // Dominios que vao ser testados
-#include "teste_dominio.h" // Testes para testar os dominios da classe dominios.h
+#include "testes_dominios.h" // Testes para testar os dominios da classe dominios.h
 #include "entidades.h" // Entidades que vao ser testadas
+#include "testes_entidades.h" // Testes para testar as entidades da classe entidades.h
 
 using namespace std;
 
@@ -18,6 +20,13 @@ int main(){
     TUSenha testeSenha;
     TUEmail testeEmail;
     TUTelefone testeTelefone;
+    // Instancias para testes de entidade
+    TUImovel testeImovel;
+    TUProposta testeProposta;
+    TUUsuario testeUsuario;
+
+    // TESTES DOS DOMINIOS
+    cout << "----- DOMINIOS -----" << endl;
 
     //Testando domínio Numero
     switch(testeNumero.run()){
@@ -110,93 +119,31 @@ int main(){
     }
 
     // TESTES DAS ENTIDADES
-    // ENTIDADE USUARIO
-    Usuario usuario;
-    // dominios necessarios
-    Nome nome;
-    Email email;
-    Senha senha;
-    Telefone telefone;
-    // Inicializacao os dominios do usuario
-    nome.setNome("Fernando");
-    email.setEmail("fer@dominio");
-    senha.setSenha("123abD");
-    telefone.setTelefone("(013)-123456789");
-    // Armazenando os dados do usuario
-    usuario.setNome(nome);
-    usuario.setEmail(email);
-    usuario.setSenha(senha);
-    usuario.setTelefone(telefone);
-    // Visualizando os dados do usuario
-    cout << "Usuario:" << endl;
-    cout << usuario.getNome().getNome() << endl;
-    cout << usuario.getEmail().getEmail() << endl;
-    cout << usuario.getSenha().getSenha() << endl;
-    cout << usuario.getTelefone().getTelefone() << endl;
-    // ENTIDADE IMOVEL
-    Imovel imovel;
-    // dominios necessarios
-    Codigo codigo;
-    Classe classe;
-    Descricao descricao;
-    Endereco endereco;
-    Data dataInicial, dataFinal;
-    Numero hospedes;
-    Moeda valor;
-    // Inicializando os dominios do imovel
-    codigo.setCodigo("AD213");
-    classe.setClasse(3);
-    descricao.setDescricao("Casa na praia.");
-    endereco.setEndereco("Hawaii");
-    dataInicial.setData("15-03-21");
-    dataFinal.setData("31-03-21");
-    hospedes.setNumero(5);
-    valor.setMoeda("10.000,00");
-    // Armazenando os dados do imovel
-    imovel.setCodigo(codigo);
-    imovel.setClasse(classe);
-    imovel.setDescricao(descricao);
-    imovel.setEndereco(endereco);
-    imovel.setDataInicial(dataInicial);
-    imovel.setDataFinal(dataFinal);
-    imovel.setHospedes(hospedes);
-    imovel.setValor(valor);
-    // Visualizando os dados do imovel
-    cout << "Imovel:" << endl;
-    cout << imovel.getCodigo().getCodigo() << endl;
-    cout << imovel.getClasse().getClasse() << endl;
-    cout << imovel.getDescricao().getDescricao() << endl;
-    cout << imovel.getEndereco().getEndereco() << endl;
-    cout << imovel.getDataInicial().getData() << endl;
-    cout << imovel.getDataFinal().getData() << endl;
-    cout << imovel.getHospedes().getNumero() << endl;
-    cout << imovel.getValor().getMoeda() << endl;
-    // ENTIDADE PROPOSTA
-    Proposta proposta;
-    // Dominios necessarios
-    Codigo codigoProp;
-    Data dataInicialProp, dataFinalProp;
-    Numero hospedesProp;
-    Moeda valorProp;
-    // Inicializando os dominios do proposta
-    codigoProp.setCodigo("AD111");
-    dataInicialProp.setData("16-03-21");
-    dataFinalProp.setData("20-03-21");
-    hospedesProp.setNumero(4);
-    valorProp.setMoeda("9.500,00");
-    // Armazenando os dados da proposta
-    proposta.setCodigo(codigoProp);
-    proposta.setDataInicial(dataInicialProp);
-    proposta.setDataFinal(dataFinalProp);
-    proposta.setHospedes(hospedesProp);
-    proposta.setValor(valorProp);
-    // Visualizando dados da proposta
-    cout << "Proposta:" << endl;
-    cout << proposta.getCodigo().getCodigo() << endl;
-    cout << proposta.getDataInicial().getData() << endl;
-    cout << proposta.getDataFinal().getData() << endl;
-    cout << proposta.getHospedes().getNumero() << endl;
-    cout << proposta.getValor().getMoeda() << endl;
+    cout << "----- ENTIDADES -----" << endl;
+
+    //Testando entidade imovel
+    switch(testeImovel.run()){
+        case TUImovel::SUCESSO: cout << "SUCESSO - IMOVEL" << endl;
+                                break;
+        case TUImovel::FALHA  : cout << "FALHA   - IMOVEL" << endl;
+                                break;
+    }
+
+    //Testando entidade proposta
+    switch(testeProposta.run()){
+        case TUProposta::SUCESSO: cout << "SUCESSO - PROPOSTA" << endl;
+                                break;
+        case TUProposta::FALHA  : cout << "FALHA   - PROPOSTA" << endl;
+                                break;
+    }
+
+    //Testando entidade usuario
+    switch(testeUsuario.run()){
+        case TUUsuario::SUCESSO: cout << "SUCESSO - USUARIO" << endl;
+                                break;
+        case TUUsuario::FALHA  : cout << "FALHA   - USUARIO" << endl;
+                                break;
+    }
 
     return 0;
 }

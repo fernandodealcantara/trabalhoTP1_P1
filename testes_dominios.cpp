@@ -1,4 +1,4 @@
-#include "teste_dominio.h"
+#include "testes_dominios.h"
 
 
 // Definições de métodos de teste de unidade do domínio Numero.
