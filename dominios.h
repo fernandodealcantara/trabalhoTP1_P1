@@ -13,32 +13,31 @@ using namespace std;
 ///
 /// - Número valido apenas inteiro de 0 a 20
 ///
-// Classe Numero feita por Fernando Mat: 190125586
+// Classe Numero feita por Victor Hugo Mat: 190129794
 class Numero {
-    private:
-        int valor;
-        void validar(int valor);
+private:
+    int valor;
+    void validar(int valor);
 
-    public:
+public:
 
-///
-/// Armazena o numero informado caso o mesmo seja valido
-///
-/// Lança exceção caso o número informado seja invalido
-///
-/// @param valor numero
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena o numero informado caso o mesmo seja valido
+    ///
+    /// Lança exceção caso o número informado seja invalido
+    ///
+    /// @param valor numero
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setNumero(int valor);
+    void setNumero(int valor);
 
-///
-/// Retorna valor
-///
-/// @return valor
-///
-
+    ///
+    /// Retorna valor
+    ///
+    /// @return valor
+    ///
         int getNumero();
 };
 
@@ -55,31 +54,31 @@ inline int Numero::getNumero(){
 ///
 // Classe Moeda feita por Fernando Mat: 190125586
 class Moeda {
-    private:
-        string valor;
-        void validar(string valor);
+private:
+    string valor;
+    void validar(string valor);
 
-    public:
+public:
 
-///
-/// Armazena o valor informado caso o mesmo seja valido
-///
-/// Lança exceção caso o valor informado seja invalido
-///
-/// @param valor da moeda
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena o valor informado caso o mesmo seja valido
+    ///
+    /// Lança exceção caso o valor informado seja invalido
+    ///
+    /// @param valor da moeda
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setMoeda(string valor);
+    void setMoeda(string valor);
 
-///
-/// Retorna valor da moeda
-///
-/// @return valor
-///
+    ///
+    /// Retorna valor da moeda
+    ///
+    /// @return valor
+    ///
 
-        string getMoeda();
+    string getMoeda();
 
 };
 
@@ -96,31 +95,31 @@ inline string Moeda::getMoeda(){
 ///
 // Classe Descricao feita por Fernando Mat: 190125586
 class Descricao{
-    private:
-        string texto;
-        void validar(string texto);
+private:
+    string texto;
+    void validar(string texto);
 
-    public:
+public:
 
-///
-/// Armazena o texto da descrição
-///
-/// Lança exceção caso o texto da descrição informado seja invalido.
-///
-/// @param texto descricao
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena o texto da descrição
+    ///
+    /// Lança exceção caso o texto da descrição informado seja invalido.
+    ///
+    /// @param texto descricao
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setDescricao(string texto);
+    void setDescricao(string texto);
 
-///
-/// Retorna o texto da descrição
-///
-/// @return string
-///
+    ///
+    /// Retorna o texto da descrição
+    ///
+    /// @return string
+    ///
 
-        string getDescricao();
+    string getDescricao();
 
 };
 
@@ -138,31 +137,31 @@ inline string Descricao::getDescricao(){
 ///
 // Classe Nome feita por Fernando Mat: 190125586
 class Nome{
-    private:
-        string nome;
-        void validar(string nome);
+private:
+    string nome;
+    void validar(string nome);
 
-    public:
+public:
 
-///
-/// Armazena o nome
-///
-/// Lança exceção caso o nome informado seja invalido.
-///
-/// @param string nome
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena o nome
+    ///
+    /// Lança exceção caso o nome informado seja invalido.
+    ///
+    /// @param string nome
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setNome(string nome);
+    void setNome(string nome);
 
-///
-/// Retorna o nome
-///
-/// @return string
-///
+    ///
+    /// Retorna o nome
+    ///
+    /// @return string
+    ///
 
-        string getNome();
+    string getNome();
 };
 
 inline string Nome::getNome(){
@@ -178,34 +177,34 @@ inline string Nome::getNome(){
 ///
 // Classe Classe feita por Andre Mat: 190084197
 class Classe{
-    private:
-        const static int APARTAMENTO = 1;
-        const static int CASA = 2;
-        const static int QUARTO = 3;
-        int classe;
-        void validar(int valor);
+private:
+    const static int APARTAMENTO = 1;
+    const static int CASA = 2;
+    const static int QUARTO = 3;
+    int classe;
+    void validar(int valor);
 
-    public:
+public:
 
-///
-/// Armazena o número informado e caso o mesmo seja valido atribui uma classe
-///
-/// Lança exceção caso o valor informado seja invalido
-///
-/// @param valor classe
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena o número informado e caso o mesmo seja valido atribui uma classe
+    ///
+    /// Lança exceção caso o valor informado seja invalido
+    ///
+    /// @param valor classe
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setClasse(int valor);
+    void setClasse(int valor);
 
-///
-/// Retorna classe
-///
-/// @return classe
-///
+    ///
+    /// Retorna classe
+    ///
+    /// @return classe
+    ///
 
-        int getClasse();
+    int getClasse();
 
 };
 
@@ -222,31 +221,31 @@ inline int Classe::getClasse(){
 ///
 // Classe Endereco feita por Andre Mat: 190084197
 class Endereco {
-    private:
-        string endereco;
-        void validar(string endereco);
+private:
+    string endereco;
+    void validar(string endereco);
 
-    public:
+public:
 
-///
-/// Armazena o endereço
-///
-/// Lança exceção caso o endereço informado seja invalido
-///
-/// @param string endereco
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena o endereço
+    ///
+    /// Lança exceção caso o endereço informado seja invalido
+    ///
+    /// @param string endereco
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setEndereco(string endereco);
+    void setEndereco(string endereco);
 
-///
-/// Retorna o endereço
-///
-/// @return string endereco
-///
+    ///
+    /// Retorna o endereço
+    ///
+    /// @return string endereco
+    ///
 
-        string getEndereco();
+    string getEndereco();
 
 };
 
@@ -264,40 +263,40 @@ inline string Endereco::getEndereco(){
 ///
 // Classe Data feita por Fernando Mat: 190125586
 class Data {
-    private:
-        string data;
-        bool bissexto;
-        void validar(string data);
+private:
+    string data;
+    bool bissexto;
+    void validar(string data);
 
-    public:
+public:
 
-///
-/// Armazena a data
-///
-/// Lança exceção caso a data informada seja invalida.
-///
-/// @param string data
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena a data
+    ///
+    /// Lança exceção caso a data informada seja invalida.
+    ///
+    /// @param string data
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setData(string data);
+    void setData(string data);
 
-///
-/// Retorna a data
-///
-/// @return string data
-///
+    ///
+    /// Retorna a data
+    ///
+    /// @return string data
+    ///
 
-        string getData();
+    string getData();
 
-///
-/// Retorna se o ano é bissexto
-///
-/// @return bool
-///
+    ///
+    /// Retorna se o ano é bissexto
+    ///
+    /// @return bool
+    ///
 
-        bool isBissexto();
+    bool isBissexto();
 };
 
 inline string Data::getData(){
@@ -315,33 +314,33 @@ inline bool Data::isBissexto(){
 ///
 /// - Formato XXXXX, X é letra maiúscula A-Z ou digito 0-9. Note que 00000 é um código invalido.
 ///
-// Classe Codigo feita por Fernando Mat: 190125586
+// Classe Codigo feita por Victor Hugo Mat: 190129794
 class Codigo {
-    private:
-        string codigo;
-        void validar(string codigo);
+private:
+    string codigo;
+    void validar(string codigo);
 
-    public:
+public:
 
-///
-/// Armazena o código
-///
-/// Lança exceção caso o código esteja em formato invalido
-///
-/// @param string codigo
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena o código
+    ///
+    /// Lança exceção caso o código esteja em formato invalido
+    ///
+    /// @param string codigo
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setCodigo(string codigo);
+    void setCodigo(string codigo);
 
-///
-/// Retorna o codigo
-///
-/// @return string codigo
-///
+    ///
+    /// Retorna o codigo
+    ///
+    /// @return string codigo
+    ///
 
-        string getCodigo();
+    string getCodigo();
 };
 
 inline string Codigo::getCodigo(){
@@ -358,31 +357,31 @@ inline string Codigo::getCodigo(){
 ///
 // Classe Senha feita por Fernando Mat: 190125586
 class Senha {
-    private:
-        string senha;
-        void validar(string senha);
+private:
+    string senha;
+    void validar(string senha);
 
-    public:
+public:
 
-///
-/// Armazena a senha
-///
-/// Lança exceção caso a senha esteja em formato invalido
-///
-/// @param string senha
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena a senha
+    ///
+    /// Lança exceção caso a senha esteja em formato invalido
+    ///
+    /// @param string senha
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setSenha(string senha);
+    void setSenha(string senha);
 
-///
-/// Retorna a senha
-///
-/// @return string senha
-///
+    ///
+    /// Retorna a senha
+    ///
+    /// @return string senha
+    ///
 
-        string getSenha();
+    string getSenha();
 };
 
 inline string Senha::getSenha(){
@@ -399,31 +398,31 @@ inline string Senha::getSenha(){
 ///
 // Classe Email feita por Fernando Mat: 190125586
 class Email {
-    private:
-        string email;
-        void validar(string email);
+private:
+    string email;
+    void validar(string email);
 
-    public:
+public:
 
-///
-/// Armazena o email
-///
-/// Lança exceção caso o email esteja em formato invalido.
-///
-/// @param string email
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena o email
+    ///
+    /// Lança exceção caso o email esteja em formato invalido.
+    ///
+    /// @param string email
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setEmail(string email);
+    void setEmail(string email);
 
-///
-/// Retorna o email
-///
-/// @return string email
-///
+    ///
+    /// Retorna o email
+    ///
+    /// @return string email
+    ///
 
-        string getEmail();
+    string getEmail();
 };
 
 inline string Email::getEmail(){
@@ -439,31 +438,31 @@ inline string Email::getEmail(){
 ///
 // Classe Telefone feita por Fernando Mat: 190125586
 class Telefone {
-    private:
-        string telefone;
-        void validar(string telefone);
+private:
+    string telefone;
+    void validar(string telefone);
 
-    public:
+public:
 
-///
-/// Armazena o telefone
-///
-/// Lança exceção caso o telefone esteja em formato invalido.
-///
-/// @param string telefone
-///
-/// @throw invalid_argument
-///
+    ///
+    /// Armazena o telefone
+    ///
+    /// Lança exceção caso o telefone esteja em formato invalido.
+    ///
+    /// @param string telefone
+    ///
+    /// @throw invalid_argument
+    ///
 
-        void setTelefone(string telefone);
+    void setTelefone(string telefone);
 
-///
-/// Retorna o telefone
-///
-/// @return string telefone
-///
+    ///
+    /// Retorna o telefone
+    ///
+    /// @return string telefone
+    ///
 
-        string getTelefone();
+    string getTelefone();
 };
 
 inline string Telefone::getTelefone(){
